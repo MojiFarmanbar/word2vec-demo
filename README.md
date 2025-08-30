@@ -20,19 +20,14 @@ Activate it, VSCode/Cursor will recognize .venv automatically
 source .venv/bin/activate
 ```
 
-Installing the project-name as a package in development mode
-```
-uv pip install -e .
-```
-
-Verify installation
-```
-python -c "import project-name; print('Package installed successfully!')"
-```
-
-It is advised to run below to resolve package dependency and exact version resolution 
+It is advised to run below to resolve package dependency and exact version resolution
 ```
 uv lock
+```
+
+Install the language model for english
+```
+uv run python -m spacy download en_core_web_md
 ```
 
 Activate [`pre-commit`](https://pre-commit.com/)hooks to format your code and enforce a consistant coding style
